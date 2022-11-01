@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>hexo系统butterfly主题安装sakana组件的方法</title>
+      <link href="/posts/1cf93fc2.html"/>
+      <url>/posts/1cf93fc2.html</url>
+      
+        <content type="html"><![CDATA[<p>GitHub大佬写出了石蒜模拟器，本贴将展示如何把它添加到我们的博客上</p><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://s3.bmp.ovh/imgs/2022/11/01/64b90069a4d8dc4f.gif"><br>可以切换角色，点击最右边的X可以关掉（防止影响体验）</p><h2 id="开整"><a href="#开整" class="headerlink" title="开整"></a>开整</h2><p>在开始之前，请确保你有一个以hexo为系统，butterfly为主题（或者其他基于pug的主题）的博客  </p><p>首先找到layout.pug<br>路径为：\themes\butterfly\layout\includes\layout.pug  </p><p>接下来复制这段代码  </p><blockquote><p>#sakana-widget(style=’position:fixed;bottom:5px;right:5px;’)<br> script.<br>  function initSakanaWidget() {<br>  new SakanaWidget().mount(‘#sakana-widget’);<br>  }<br>script(async=’’ onload=’initSakanaWidget()’ src=’<a href="https://cdn.jsdelivr.net/npm/sakana-widget@2.2.1/lib/sakana.min.js&#39;">https://cdn.jsdelivr.net/npm/sakana-widget@2.2.1/lib/sakana.min.js&#39;</a>)   </p></blockquote><p>放到代码的最底下<br><img src="https://s3.bmp.ovh/imgs/2022/11/01/1d439ebe556e72a3.png"></p><p>没有读懂的可以看图，加了底色的是要添加的代码</p><p>保存后直接部署就可以了  </p><p>补：第一行代码可以调整在屏幕上的位置（比如我习惯右手操作手机，在手机端上阻碍操作，所以改到了左边）  </p><p>end</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的图床</title>
       <link href="/posts/2e4464e.html"/>
       <url>/posts/2e4464e.html</url>
