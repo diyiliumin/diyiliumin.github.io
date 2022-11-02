@@ -1,9 +1,15 @@
  body {
-   cursor:url(https://diyiliumin.github.io/AAAmystuff/0sp5.cur),
+	cursor:url(https://diyiliumin.github.io/AAAmystuff/0sp5.cur),
          default;
  }
  a,
  img {
-   cursor:url(https://diyiliumin.github.io/AAAmystuff/0sp5.cur),
+	cursor:url(https://diyiliumin.github.io/AAAmystuff/0sp5.cur),
          default;
+	cursor:url(https://diyiliumin.github.io/AAAmystuff/0SP4.ani),
+         move;
+	cursor:url(https://diyiliumin.github.io/AAAmystuff/0sp6.cur),
+         pointer;
+	cursor:url(https://diyiliumin.github.io/AAAmystuff/0SP4.ani),
+         wait;	
  }
