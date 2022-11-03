@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>如何去掉底部蓝块</title>
+      <link href="/posts/3b2c09e4.html"/>
+      <url>/posts/3b2c09e4.html</url>
+      
+        <content type="html"><![CDATA[<p>找到  </p><blockquote><p>\themes\butterfly\source\css_layout\footer.styl</p></blockquote><p>打开后把第三行</p><blockquote><p>background: $light-blue   </p></blockquote><p>注释掉//</p><blockquote><p>//background: $light-blue</p></blockquote><p>完事</p><p>end</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>更换光标皮肤的方法</title>
       <link href="/posts/3947ac4e.html"/>
       <url>/posts/3947ac4e.html</url>
