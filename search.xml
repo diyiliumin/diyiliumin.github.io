@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>更换光标皮肤的方法</title>
+      <link href="/posts/3947ac4e.html"/>
+      <url>/posts/3947ac4e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h1><p><img src="https://s3.bmp.ovh/imgs/2022/11/03/42ea626a7eea2d0b.gif"><br>最近看到sp的自带光标很好看，所以上网找了资源放进博客</p><h1 id="开整"><a href="#开整" class="headerlink" title="开整"></a>开整</h1><h2 id="光标获取"><a href="#光标获取" class="headerlink" title="光标获取"></a>光标获取</h2><p>可以去网上找现成的cur，也可以自己抠图成png再<a href="https://convertio.co/zh/" title="转换">https://convertio.co/zh/</a>成cur  </p><p>如果在网上找了，大小不合适（比如巨大或者超小）先转成png（用工具，不要直接改后缀名）调整大小（一般32X32）再转回来<br><img src="https://s3.bmp.ovh/imgs/2022/11/03/b3d1bae9d41a269c.png">  <img src="https://s3.bmp.ovh/imgs/2022/11/03/9fa96c813ca9a79a.png" alt=" "><br>比如我就转换了好几次（汗  </p><h2 id="生成url"><a href="#生成url" class="headerlink" title="生成url"></a>生成url</h2><p>因为是cur格式的文件，不能用图床，我们可以直接把它托管到github上  </p><p>把文件放在</p><blockquote><p>\themes\butterfly\source\  </p></blockquote><p>下（请举一反三</p><p>hexo cl g d三件套后再网页上查看<br><img src="https://s3.bmp.ovh/imgs/2022/11/03/5483edfb930b928e.png"><br>可以看到已经上传成功了（我建了个文件夹叫AAAmystuff<br><img src="https://s3.bmp.ovh/imgs/2022/11/03/6ddc4ed860a95411.png"><br>文件的url形如这样</p><h2 id="建立css"><a href="#建立css" class="headerlink" title="建立css"></a>建立css</h2><p>关于css文件的建立和引入我已经在《调正首页磁贴透明度的方法》中讲过，具体方法请移步<br>如果你只要一个鼠标，写这个</p><blockquote><p> body {<br>   cursor:url(<a href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur">https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur</a>),<br>         default;<br> }<br> a,<br> img {<br>   cursor:url(<a href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur">https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur</a>),<br>         default;<br> }</p></blockquote><p> 请url里面东西换成自己的</p><p> 如果需要多种效果，可以写这个</p><pre><code class="hljs language-css copyable" lang="css"><span class="hljs-comment">/* 全局默认鼠标指针 */</span><span class="hljs-selector-tag">body</span>,<span class="hljs-selector-tag">html</span>&#123;  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto <span class="hljs-meta">!important</span>;&#125;<span class="hljs-comment">/* 悬停图片时的鼠标指针 */</span><span class="hljs-selector-tag">img</span>&#123;  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto <span class="hljs-meta">!important</span>;&#125;<span class="hljs-comment">/* 选择链接标签时的鼠标指针 */</span><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>&#123;    <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto;&#125;<span class="hljs-comment">/* 选中输入框时的鼠标指针 */</span><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:hover</span>&#123;    <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto;&#125;<span class="hljs-comment">/* 悬停按钮时的鼠标指针 */</span><span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:hover</span>&#123;    <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto;&#125;<span class="hljs-comment">/* 悬停列表标签时的鼠标指针 */</span><span class="hljs-selector-tag">i</span><span class="hljs-selector-pseudo">:hover</span>&#123;    <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto;&#125;<span class="hljs-comment">/* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */</span><span class="hljs-selector-id">#footer-wrap</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>&#123;      <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto;&#125;<span class="hljs-comment">/* 悬停页码时的鼠标指针 */</span><span class="hljs-selector-id">#pagination</span> <span class="hljs-selector-class">.page-number</span><span class="hljs-selector-pseudo">:hover</span>&#123;      <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto;&#125;<span class="hljs-comment">/* 悬停菜单栏时的鼠标指针 */</span><span class="hljs-selector-id">#nav</span> <span class="hljs-selector-class">.site-page</span><span class="hljs-selector-pseudo">:hover</span>&#123;      <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'指定样式cur文件路径'</span>),auto;&#125;<span class="copy-code-btn">复制代码</span></code></pre><p>之后引入css就可以运行了</p><p>end</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>调整首页磁贴透明度的方法</title>
+      <link href="/posts/31246b9d.html"/>
+      <url>/posts/31246b9d.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="动机介绍"><a href="#动机介绍" class="headerlink" title="动机介绍"></a>动机介绍</h1><p>很多时候，我们精心选择的背景图却被其他元素挡住，只能透过元素之间的小缝来看（卷帘快门是吧<br><img src="https://s3.bmp.ovh/imgs/2022/11/03/67029af43a76620e.png"><br>比如这样，就看了个寂寞  </p><h1 id="开整"><a href="#开整" class="headerlink" title="开整"></a>开整</h1><h2 id="创建css"><a href="#创建css" class="headerlink" title="创建css"></a>创建css</h2><p>在此路径下新建一个css文件（我的叫mycss）</p><blockquote><p>\themes\你使用的主题\source\css</p></blockquote><p>然后写入以下代码  </p><blockquote><p>/* 文章页背景 <em>/<br>.layout_post&gt;#post {<br>    /</em> 以下代表透明度为0.5 可以自行修改*/<br>    background: rgba(255,255,255,.5);<br>}  </p></blockquote><blockquote><p>/* 所有页面背景 <em>/<br>#aside_content .card-widget, #recent-posts&gt;.recent-post-item, .layout_page&gt;div:first-child:not(.recent-posts), .layout_post&gt;#page, .layout_post&gt;#post, .read-mode .layout_post&gt;#post{<br>    /</em> 以下代表透明度为0.5 */<br>    background: rgba(255,255,255,.5);<br>}  </p></blockquote><p>修改最后一个参数可以达到不同的透明度<br>数字越小越透明</p><h2 id="引入css"><a href="#引入css" class="headerlink" title="引入css"></a>引入css</h2><p>在butterfly.yml（或者你自己的主题，请举一反三）搜索inject<br>插入标了底色的代码（你引入的css名字叫啥就填啥<br><img src="https://s3.bmp.ovh/imgs/2022/11/03/33c8538267c4690e.png">  </p><p>然后保存就可以运行了</p><p><img src="https://s3.bmp.ovh/imgs/2022/11/03/a9677d52cdabcb81.png"><br>效果展示  </p><p>end</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo系统butterfly主题安装sakana组件的方法</title>
       <link href="/posts/1cf93fc2.html"/>
       <url>/posts/1cf93fc2.html</url>
